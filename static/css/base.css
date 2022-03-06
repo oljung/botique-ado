@@ -28,14 +28,14 @@ body {
 }
 
 .shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
+    background: black !important;
+    color: white !important;
+    min-width: 260px !important;
 }
 
 .btn-black {
-    background: black;
-    color: white;
+    background: black !important;
+    color: white !important;
 }
 
 .shop-now-button:hover,
