@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
-
+from django.conf import settings
+import os
 from products.models import Product
 
 # Create your views here.
@@ -8,7 +9,10 @@ from products.models import Product
 
 def view_bag(request):
     """ A view that renders the bag contents page """
+    print('public', settings.STRIPE_PUBLIC_KEY)
+    print('secret', settings.STRIPE_SECRET_KEY)
 
+    print('os', os.getenv('STRIPE_PUBLIC_KEY', ''))
     return render(request, 'bag/bag.html')
 
 
